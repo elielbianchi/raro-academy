@@ -8,8 +8,7 @@ const desafioUm2asRosasNaoFalam = async () => {
   const timeout = (ms: number, frase: string): Promise<void> => {
     return new Promise(resolve => {
       setTimeout(() => {
-        console.log(frase);
-        resolve();
+        resolve(console.log(frase));
       }, ms);
     });
   };
