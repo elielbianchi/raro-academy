@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align:baseline;
+    list-style: none;
+}
+
+.page {
+    background-color: #4D77FF;
+    min-width: 1000px;
+}
+
+.pageInner {
+    margin: 24px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 200px;
+}
+
+.contacts-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F2FA5A;
+    border-color:rgb(118, 118, 118);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.search-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #F2FA5A;
+    color: rgb(118, 118, 118);
+    font-size: 30px;
+    padding: 10px 100px;
+    border-radius: 48px;
+}
+
+.main-container {
+    padding: 0px 200px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #56BBF1;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.name-picture-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-name-position {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.name {
+    color: #F1E1A6;
+    font-size: 30px;
+}
+
+.position {
+    color: #F4BBBB;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-picture {
+    display: block inline;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+}
+
+.picture {
+    max-width: 160%;
+    max-height: 170%;
+    object-fit: cover;
+}
+
+.right-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.call-button {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F2FA5A;
+    background-color: #56F1F1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 8px;
+    border-color: #F1E1A6;
+    border-radius: 8px;
+}
+
+.email-button {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F2FA5A;
+    background-color: #56F1F1;
+    border-color: #F1E1A6;
+    margin-left: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.footer-text {
+    color: #F2FA5A;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 200px;
+}
