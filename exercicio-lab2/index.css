@@ -4,22 +4,26 @@
     border: 0;
     vertical-align:baseline;
     list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 .page {
     background-color: #4D77FF;
-    min-width: 1000px;
+    min-width: 800px;
+    padding-bottom: 80px;
+    padding-top: 10px;
 }
 
 .pageInner {
-    margin: 24px;
+    margin: 0px;
 }
 
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px 200px;
+    padding: 40px 24px;
 }
 
 .contacts-header {
@@ -28,7 +32,7 @@
     justify-content: center;
     color: #F2FA5A;
     border-color:rgb(118, 118, 118);
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
 }
 
@@ -39,13 +43,13 @@
     text-decoration: none;
     background-color: #F2FA5A;
     color: rgb(118, 118, 118);
-    font-size: 30px;
+    font-size: 27px;
     padding: 10px 100px;
     border-radius: 48px;
 }
 
 .main-container {
-    padding: 0px 200px;
+    padding: 0px 24px;
 }
 
 .contact {
@@ -73,7 +77,7 @@
 
 .name {
     color: #F1E1A6;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .position {
@@ -91,7 +95,7 @@
 }
 
 .picture {
-    max-width: 160%;
+    max-width: 170%;
     max-height: 170%;
     object-fit: cover;
 }
@@ -102,38 +106,26 @@
     justify-content: center;
 }
 
-.call-button {
+.call-button, .email-button {
     text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #F2FA5A;
+    border: solid;
     background-color: #56F1F1;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 8px;
-    border-color: #F1E1A6;
-    border-radius: 8px;
-}
-
-.email-button {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #F2FA5A;
-    background-color: #56F1F1;
-    border-color: #F1E1A6;
     margin-left: 10px;
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 8px;
+    border-color: #F2FA5A;
     border-radius: 8px;
+    border-width: 1px;
 }
 
 .footer-text {
     color: #F2FA5A;
     font-size: 20px;
     font-weight: bold;
-    padding: 0px 200px;
+    padding: 0px 24px;
 }
