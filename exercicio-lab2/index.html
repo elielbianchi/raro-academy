@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +19,7 @@
 
         const Page = ({ children }) => (
             <article className="page">
-                <section className="pageInner">{children}</section>
+                {children}
             </article>
         )
 
@@ -27,10 +28,9 @@
                 <h1 className="contacts-header">
                     CONTACTS
                 </h1>
-                <div>
-                    <a href="#" className="search-button">
-                        Search </a>
-                </div>
+                <a href="#" className="search-button">
+                    Search
+                </a>
             </header>
         )
 
@@ -43,33 +43,36 @@
         const Contact = ({ name, position, picture }) => (
             <section className="contact">
                 <div className="name-picture-block">
-                    <div className="profile-picture">
+                    <picture className="profile-picture">
                         <img className="picture"
                             src={picture}
                             alt="" />
-                    </div>
+                    </picture>
                     <div className="profile-name-position">
                         <h2 className="name">
-                            {name}</h2>
+                            {name}
+                        </h2>
                         <h3 className="position">
                             {position}
                         </h3>
                     </div>
                 </div>
                 <div className="right-buttons">
-                    <a href="#"
-                        className="call-button">
-                        Call </a>
-                    <a href="#"
-                        className="email-button">
-                        Send e-mail </a>
+                    <a href="#" className="call-button">
+                        Call
+                    </a>
+                    <a href="#" className="email-button">
+                        Send e-mail
+                    </a>
                 </div>
             </section>
         )
 
         const Footer = () => (
             <footer className="footer">
-                <span className="footer-text">We found 23 contacts</span>
+                <span className="footer-text">
+                    We found 23 contacts
+                </span>
             </footer>
         )
 
@@ -77,10 +80,10 @@
             <Page>
                 <Header />
                 <ContainerContacts>
-                    <Contact name="Tom James" position="Programmer" picture="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" />
-                    <Contact name="Alessa Smith" position="Manager" picture="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" />
-                    <Contact name="Kate Minard" position="Web Designer" picture="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" />
-                    <Contact name="John Tudor" position="Database Admin" picture="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=344&q=80" />
+                    <Contact name="Tom James" position="Programmer" picture="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=387&q=80" />
+                    <Contact name="Alessa Smith" position="Manager" picture="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=387&q=80" />
+                    <Contact name="Kate Minard" position="Web Designer" picture="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=464&q=80" />
+                    <Contact name="John Tudor" position="Database Admin" picture="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=344&q=80" />
                 </ContainerContacts>
                 <Footer />
             </Page>
