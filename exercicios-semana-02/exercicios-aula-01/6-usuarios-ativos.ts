@@ -10,14 +10,8 @@ const usuarios = [
     { nome: 'Lucas', idade: 30, ativo: false },
 ];
 
-const usuariosAtivos: Array<unknown> = [];
-const usuariosInativos: Array<unknown> = [];
-
-function setAtivos (usuario: Record<string, unknown>) {
-    return usuario.ativo ? usuariosAtivos.push(usuario) : usuariosInativos.push(usuario);
-}
-
-usuarios.filter(setAtivos);
+const usuariosAtivos: Array<unknown> = usuarios.filter(pessoa => pessoa.ativo);
+const usuariosInativos: Array<unknown> = usuarios.filter(pessoa => !pessoa.ativo);
 
 console.log('Usuários Ativos:')
 console.log(usuariosAtivos);
