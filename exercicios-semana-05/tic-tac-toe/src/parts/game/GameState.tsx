@@ -8,8 +8,6 @@ let xWinnings = 0;
 
 let oWinnings = 0;
 
-let restart: boolean = false;
-
 const createBoard = () => Array<SquareValue>(9).fill(null);
 
 function calculateWinner(boardState: BoardState) {
@@ -49,25 +47,23 @@ export function useGameState() {
     played: [createBoard()],
     round: 0,
   });
-
-  function resetGame() {
-    console.log("Função chamada");
-    restart = true;
-    }
   
+    const current = gameState.played[gameState.round];
+    const xIsNext = gameState.round % 2 === 0;
+    const winner = calculateWinner(current);
+    let isDraw: boolean = !winner && gameState.round === 9
 
   useEffect(() => {
-    setGameState({
-      played: [createBoard()],
-      round: 0,
-    });
-    restart = false;
-}, [restart]);
-
-
-  const current = gameState.played[gameState.round];
-  const xIsNext = gameState.round % 2 === 0;
-  const winner = calculateWinner(current);
+    setTimeout(() => {
+      setGameState({
+        played: [createBoard()],
+        round: 0,
+      });
+    }, 300);
+    return () => {
+      isDraw = false;
+    };
+}, [winner, isDraw]);
 
   function handleClick(square: number) {
     const played = gameState.played.slice(0, gameState.round + 1);
@@ -91,6 +87,5 @@ export function useGameState() {
     handleClick,
     xWinnings,
     oWinnings,
-    resetGame,
   };
 }
