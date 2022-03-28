@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export type SquareValue = "X" | "O" | null;
 
@@ -7,6 +7,8 @@ export type BoardState = SquareValue[];
 let xWinnings = 0;
 
 let oWinnings = 0;
+
+let restart: boolean = false;
 
 const createBoard = () => Array<SquareValue>(9).fill(null);
 
@@ -50,11 +52,18 @@ export function useGameState() {
 
   function resetGame() {
     console.log("Função chamada");
+    restart = true;
+    }
+  
+
+  useEffect(() => {
     setGameState({
       played: [createBoard()],
       round: 0,
     });
-  }
+    restart = false;
+}, [restart]);
+
 
   const current = gameState.played[gameState.round];
   const xIsNext = gameState.round % 2 === 0;
