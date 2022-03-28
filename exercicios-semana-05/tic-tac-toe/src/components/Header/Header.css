@@ -16,10 +16,12 @@
   .game-title {
     font-size: 35px;
     font-weight: 600;
-    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
   }
   
   .game-info {
+    text-align: center;
     font-size: 20px;
     font-weight: 300;
   }

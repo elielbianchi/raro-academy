@@ -4,6 +4,10 @@ export type SquareValue = "X" | "O" | "";
 
 export type BoardState = SquareValue[];
 
+let xWinnings = 0;
+
+let oWinnings = 0;
+
 const createBoard = () => Array<SquareValue>(9).fill("");
 
 function calculateWinner(boardState: BoardState) {
@@ -26,6 +30,7 @@ function calculateWinner(boardState: BoardState) {
       boardState[a] === boardState[b] &&
       boardState[a] === boardState[c]
     ) {
+      boardState[a]  === "X" ? (xWinnings++) : (oWinnings++);
       return boardState[a];
     }
   }
@@ -42,6 +47,13 @@ export function useGameState() {
     played: [createBoard()],
     round: 0,
   });
+
+  function resetGame() {
+    setGameState({
+      played: [createBoard()],
+      round: 0,
+    });
+  }
 
   const current = gameState.played[gameState.round];
   const xIsNext = gameState.round % 2 === 0;
@@ -67,5 +79,8 @@ export function useGameState() {
     xIsNext,
     winner,
     handleClick,
+    xWinnings,
+    oWinnings,
+    resetGame,
   };
 }
