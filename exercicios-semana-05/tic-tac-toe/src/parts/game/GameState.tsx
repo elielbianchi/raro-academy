@@ -49,8 +49,7 @@ export function useGameState() {
   });
 
   function resetGame() {
-    debugger;
-    console.log("resetGameInt");
+    console.log("Função chamada");
     setGameState({
       played: [createBoard()],
       round: 0,
