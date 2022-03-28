@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export type SquareValue = "X" | "O" | "";
+export type SquareValue = "X" | "O" | null;
 
 export type BoardState = SquareValue[];
 
@@ -8,7 +8,7 @@ let xWinnings = 0;
 
 let oWinnings = 0;
 
-const createBoard = () => Array<SquareValue>(9).fill("");
+const createBoard = () => Array<SquareValue>(9).fill(null);
 
 function calculateWinner(boardState: BoardState) {
   const winningCombinations = [
@@ -30,7 +30,7 @@ function calculateWinner(boardState: BoardState) {
       boardState[a] === boardState[b] &&
       boardState[a] === boardState[c]
     ) {
-      boardState[a]  === "X" ? (xWinnings++) : (oWinnings++);
+      boardState[a] === "X" ? xWinnings++ : oWinnings++;
       return boardState[a];
     }
   }
@@ -49,6 +49,8 @@ export function useGameState() {
   });
 
   function resetGame() {
+    debugger;
+    console.log("resetGameInt");
     setGameState({
       played: [createBoard()],
       round: 0,

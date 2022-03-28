@@ -1,13 +1,22 @@
 import { FC } from "react";
+import { useGameState } from "../../parts/game/GameState";
 import "./RestartButton.css";
 
-export type ButtonProps = {
-  onClick: () => void;
-};
+// export type ButtonProps = {
+//   onClick: () => void;
+// };
 
-const RestartButton: FC<ButtonProps> = ({ children, onClick }) => {
+const RestartButton: FC= ({ children,}) => {
+
+  const { resetGame } = useGameState();
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    resetGame();
+  } 
+
   return (
-    <button className="restart-button" onClick={onClick} type="button">
+    <button className="restart-button" onClick={handleClick} type="button">
       {children}
     </button>
   );

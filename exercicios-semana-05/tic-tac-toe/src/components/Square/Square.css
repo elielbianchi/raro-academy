@@ -1,12 +1,12 @@
 .square {
-    width: 90px;
-    height: 80px;
-    font-size: 40pt;
-    margin: 4px 2px;
-    font-weight: 400;
-    padding-top: 10px;
-    border-radius: 5px;
-    text-align: center;
-    background-color: rgb(20, 156, 20);
-    color: black;
-  }
+  width: 90px;
+  height: 80px;
+  font-size: 40pt;
+  margin: 4px 2px;
+  font-weight: 400;
+  padding-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgb(20, 156, 20);
+  color: black;
+}

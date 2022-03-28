@@ -3,7 +3,6 @@ import { useGameState } from "../../parts/game/GameState";
 import "./Footer.css";
 
 const Footer: FC = () => {
-
   const { xWinnings, oWinnings } = useGameState();
 
   return (
